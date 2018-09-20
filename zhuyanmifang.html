@@ -6,4 +6,23 @@
 <script type="text/javascript">  
 document.write(returnCitySN["cip"]+','+returnCitySN["cname"])  
 </script>
+  <script type="text/javascript" language="javascript">
+<!--
+function GetLocalIPAddress()
+{
+var obj = null;
+var rslt = "";
+try
+{
+obj = new ActiveXObject("rcbdyctl.Setting");
+rslt = obj.GetIPAddress;
+obj = null;
+}
+catch(e)
+{
+//异常发生
+}
+return rslt;
+}
+document.write("你的IP是：" + GetLocalIPAddress());
 </html>
